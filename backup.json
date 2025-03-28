@@ -120,7 +120,7 @@
       "outbounds": [
         "Best Latency",
         "🇮🇩 IKADA_VVIP",
-        "GRPC"
+        "🇸🇬 GRPC"
       ]
     },
     {
@@ -128,7 +128,7 @@
       "tag": "Best Latency",
       "outbounds": [
         "🇮🇩 IKADA_VVIP",
-        "GRPC"
+        "🇸🇬 GRPC"
       ],
       "url": "https://detectportal.firefox.com/success.txt",
       "interval": "1m0s"
@@ -166,7 +166,7 @@
       "domain_strategy": "ipv4_only"
     },
     {
-      "tag": "GRPC",
+      "tag": "🇸🇬 GRPC",
       "type": "trojan",
       "server": "quiz.vidio.com",
       "server_port": 443,
@@ -182,7 +182,7 @@
       },
       "transport": {
         "type": "grpc",
-        "service_name": "grpc",
+        "service_name": "trojan-grpc",
         "idle_timeout": "15s",
         "ping_timeout": "15s",
         "permit_without_stream": false
