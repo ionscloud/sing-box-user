@@ -54,7 +54,7 @@
       },
       {
         "domain_suffix": [
-          "ikd.hariyono.my.id",
+          "ions-do.zidstore.id",
           "ions-do.zidstore.id"
         ],
         "server": "direct-dns",
@@ -119,7 +119,7 @@
       "tag": "Internet",
       "outbounds": [
         "Best Latency",
-        "🇮🇩 IKADA_VVIP",
+        "🇸🇬 WS",
         "🇸🇬 GRPC"
       ]
     },
@@ -127,41 +127,38 @@
       "type": "urltest",
       "tag": "Best Latency",
       "outbounds": [
-        "🇮🇩 IKADA_VVIP",
+        "🇸🇬 WS",
         "🇸🇬 GRPC"
       ],
       "url": "https://detectportal.firefox.com/success.txt",
       "interval": "1m0s"
     },
     {
-      "tag": "🇮🇩 IKADA_VVIP",
-      "type": "vmess",
+      "tag": "🇸🇬 WS",
+      "type": "trojan",
       "server": "quiz.vidio.com",
       "server_port": 443,
-      "uuid": "a4c1f3d6-9cf0-44b0-aaaf-b4b3739561aa",
-      "security": "auto",
-      "alter_id": 0,
-      "global_padding": false,
-      "authenticated_length": true,
+      "password": "156eb38c-f5f1-4e8c-b62f-0e1e3f995e5a",
+      "tls": {
+        "enabled": true,
+        "server_name": "ions-do.zidstore.id",
+        "insecure": true,
+        "utls": {
+          "enabled": true,
+          "fingerprint": "chrome"
+        }
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/ions/trojan-ws",
+        "headers": {
+          "Host": "ions-do.zidstore.id"
+        }
+      },
       "multiplex": {
         "enabled": false,
         "protocol": "smux",
         "max_streams": 32
-      },
-      "tls": {
-        "enabled": true,
-        "server_name": "ikd.hariyono.my.id",
-        "insecure": true,
-        "disable_sni": false
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/vmess",
-        "headers": {
-          "Host": "ikd.hariyono.my.id"
-        },
-        "max_early_data": 0,
-        "early_data_header_name": "Sec-WebSocket-Protocol"
       },
       "domain_strategy": "ipv4_only"
     },
