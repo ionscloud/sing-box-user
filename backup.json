@@ -54,8 +54,8 @@
       },
       {
         "domain_suffix": [
-          "ions-do.zidstore.id",
-          "ions-do.zidstore.id"
+          "ikd.hariyono.my.id",
+          "ikd.hariyono.my.id"
         ],
         "server": "direct-dns",
         "rewrite_ttl": 20
@@ -119,75 +119,75 @@
       "tag": "Internet",
       "outbounds": [
         "Best Latency",
-        "🇸🇬 WS",
-        "🇸🇬 GRPC"
+        "🇮🇩 IKADA_VVIP",
+        "🇮🇩 IKADA_VIP"
       ]
     },
     {
       "type": "urltest",
       "tag": "Best Latency",
       "outbounds": [
-        "🇸🇬 WS",
-        "🇸🇬 GRPC"
+        "🇮🇩 DO_TLS",
+        "🇮🇩 DO_VIP"
       ],
       "url": "https://detectportal.firefox.com/success.txt",
       "interval": "1m0s"
     },
     {
-      "tag": "🇸🇬 WS",
-      "type": "trojan",
+      "tag": "🇮🇩 DO_TLS",
+      "type": "vmess",
       "server": "quiz.vidio.com",
       "server_port": 443,
-      "password": "156eb38c-f5f1-4e8c-b62f-0e1e3f995e5a",
-      "tls": {
-        "enabled": true,
-        "server_name": "ions-do.zidstore.id",
-        "insecure": true,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/ions/trojan-ws",
-        "headers": {
-          "Host": "ions-do.zidstore.id"
-        }
-      },
+      "uuid": "3714955b-3a80-4ea3-83d4-d467c3213dee",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
       "multiplex": {
         "enabled": false,
         "protocol": "smux",
         "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "ions-do.zidstore.id",
+        "insecure": true,
+        "disable_sni": false
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vmess",
+        "headers": {
+          "Host": "ions-do.zidstore.id"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
       },
       "domain_strategy": "ipv4_only"
     },
     {
-      "tag": "🇸🇬 GRPC",
-      "type": "trojan",
+      "tag": "🇮🇩 DO_VIP",
+      "type": "vmess",
       "server": "quiz.vidio.com",
-      "server_port": 443,
-      "password": "156eb38c-f5f1-4e8c-b62f-0e1e3f995e5a",
-      "tls": {
-        "enabled": true,
-        "server_name": "ions-do.zidstore.id",
-        "insecure": true,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "grpc",
-        "service_name": "trojan-grpc",
-        "idle_timeout": "15s",
-        "ping_timeout": "15s",
-        "permit_without_stream": false
-      },
+      "server_port": 80,
+      "uuid": "3714955b-3a80-4ea3-83d4-d467c3213dee",
+      "security": "auto",
+      "alter_id": 0,
+      "global_padding": false,
+      "authenticated_length": true,
       "multiplex": {
         "enabled": false,
         "protocol": "smux",
         "max_streams": 32
+      },
+      "transport": {
+        "type": "ws",
+        "path": "/vmess",
+        "headers": {
+          "Host": "ions-do.zidstore.id"
+        },
+        "max_early_data": 0,
+        "early_data_header_name": "Sec-WebSocket-Protocol"
       },
       "domain_strategy": "ipv4_only"
     },
