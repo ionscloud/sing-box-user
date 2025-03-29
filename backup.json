@@ -54,11 +54,8 @@
       },
       {
         "domain_suffix": [
-          "ikd.hariyono.my.id",
           "ions-do.zidstore.id",
-          "ikd.hariyono.my.id",
           "ions-do.zidstore.id",
-          "ikd.hariyono.my.id",
           "ions-do.zidstore.id"
         ],
         "server": "direct-dns",
@@ -123,11 +120,8 @@
       "tag": "Internet",
       "outbounds": [
         "Best Latency",
-        "🍌🍌🍌",
         "🌽🌽🌽",
-        "🍊🍊🍊",
         "🍅🍅🍅",
-        "🍏🍏🍏",
         "🥕🥕🥕"
       ]
     },
@@ -135,44 +129,12 @@
       "type": "urltest",
       "tag": "Best Latency",
       "outbounds": [
-        "🍌🍌🍌",
         "🌽🌽🌽",
-        "🍊🍊🍊",
         "🍅🍅🍅",
-        "🍏🍏🍏",
         "🥕🥕🥕"
       ],
       "url": "https://detectportal.firefox.com/success.txt",
       "interval": "1m0s"
-    },
-    {
-      "tag": "🍌🍌🍌",
-      "type": "trojan",
-      "server": "quiz.vidio.com",
-      "server_port": 443,
-      "password": "75ccfee5-5fc2-48cd-830a-c29321ef5cba",
-      "tls": {
-        "enabled": true,
-        "server_name": "ikd.hariyono.my.id",
-        "insecure": true,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/trojan-ws",
-        "headers": {
-          "Host": "ikd.hariyono.my.id"
-        }
-      },
-      "multiplex": {
-        "enabled": false,
-        "protocol": "smux",
-        "max_streams": 32
-      },
-      "domain_strategy": "ipv4_only"
     },
     {
       "tag": "🌽🌽🌽",
@@ -200,38 +162,6 @@
         "enabled": false,
         "protocol": "smux",
         "max_streams": 32
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "🍊🍊🍊",
-      "type": "vmess",
-      "server": "quiz.vidio.com",
-      "server_port": 443,
-      "uuid": "d5fcf63a-3839-4e11-9018-29bd0ee09484",
-      "security": "auto",
-      "alter_id": 0,
-      "global_padding": false,
-      "authenticated_length": true,
-      "multiplex": {
-        "enabled": false,
-        "protocol": "smux",
-        "max_streams": 32
-      },
-      "tls": {
-        "enabled": true,
-        "server_name": "ikd.hariyono.my.id",
-        "insecure": true,
-        "disable_sni": false
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/vmess",
-        "headers": {
-          "Host": "ikd.hariyono.my.id"
-        },
-        "max_early_data": 0,
-        "early_data_header_name": "Sec-WebSocket-Protocol"
       },
       "domain_strategy": "ipv4_only"
     },
@@ -264,32 +194,6 @@
         },
         "max_early_data": 0,
         "early_data_header_name": "Sec-WebSocket-Protocol"
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "🍏🍏🍏",
-      "type": "vless",
-      "server": "quiz.vidio.com",
-      "server_port": 443,
-      "uuid": "f8ccbd94-4bfa-400c-b947-a83b9cdf01e7",
-      "flow": "",
-      "tls": {
-        "enabled": true,
-        "server_name": "ikd.hariyono.my.id",
-        "insecure": true,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "packet_encoding": "xudp",
-      "transport": {
-        "type": "ws",
-        "path": "/vless",
-        "headers": {
-          "Host": "ikd.hariyono.my.id"
-        }
       },
       "domain_strategy": "ipv4_only"
     },
