@@ -54,8 +54,8 @@
       },
       {
         "domain_suffix": [
-          "ikd.hariyono.my.id",
-          "ikd.hariyono.my.id"
+          "ions-do.zidstore.id",
+          "ions-do.zidstore.id"
         ],
         "server": "direct-dns",
         "rewrite_ttl": 20
@@ -119,8 +119,8 @@
       "tag": "Internet",
       "outbounds": [
         "Best Latency",
-        "🇮🇩 IKADA_VVIP",
-        "🇮🇩 IKADA_VIP"
+        "🇮🇩 DO_TLS",
+        "🇮🇩 DO_VIP"
       ]
     },
     {
