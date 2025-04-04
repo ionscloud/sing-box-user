@@ -138,7 +138,7 @@
       "type": "vmess",
       "server": "quiz.vidio.com",
       "server_port": 443,
-      "uuid": "UUID",
+      "uuid": "362530c2-740e-4134-aaf6-5a03d9004f3d",
       "security": "auto",
       "alter_id": 0,
       "global_padding": false,
@@ -150,7 +150,7 @@
       },
       "tls": {
         "enabled": true,
-        "server_name": "ikd.hariyono.my.id",
+        "server_name": "ions-do2.zidstore.id",
         "insecure": true,
         "disable_sni": false
       },
@@ -158,7 +158,7 @@
         "type": "ws",
         "path": "/vmess",
         "headers": {
-          "Host": "ikd.hariyono.my.id"
+          "Host": "ions-do2.zidstore.id"
         },
         "max_early_data": 0,
         "early_data_header_name": "Sec-WebSocket-Protocol"
@@ -170,7 +170,7 @@
       "type": "vmess",
       "server": "quiz.vidio.com",
       "server_port": 80,
-      "uuid": "UUID",
+      "uuid": "362530c2-740e-4134-aaf6-5a03d9004f3d",
       "security": "auto",
       "alter_id": 0,
       "global_padding": false,
