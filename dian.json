@@ -54,8 +54,8 @@
       },
       {
         "domain_suffix": [
-          "ikd.hariyono.my.id",
-          "ikd.hariyono.my.id"
+          "ions-do.zidstore.id",
+          "ions-do.zidstore.id"
         ],
         "server": "direct-dns",
         "rewrite_ttl": 20
@@ -150,7 +150,7 @@
       },
       "tls": {
         "enabled": true,
-        "server_name": "ikd.hariyono.my.id",
+        "server_name": "ions-do.zidstore.id",
         "insecure": true,
         "disable_sni": false
       },
@@ -158,7 +158,7 @@
         "type": "ws",
         "path": "/vmess",
         "headers": {
-          "Host": "ikd.hariyono.my.id"
+          "Host": "ions-do.zidstore.id"
         },
         "max_early_data": 0,
         "early_data_header_name": "Sec-WebSocket-Protocol"
@@ -184,7 +184,7 @@
         "type": "ws",
         "path": "/vmess",
         "headers": {
-          "Host": "ikd.hariyono.my.id"
+          "Host": "ions-do.zidstore.id"
         },
         "max_early_data": 0,
         "early_data_header_name": "Sec-WebSocket-Protocol"
