@@ -119,26 +119,26 @@
       "tag": "Internet",
       "outbounds": [
         "Best Latency",
-        "🇮🇩 IKADA_VVIP",
-        "🇮🇩 IKADA_VIP"
+        "🇸🇬 DO I",
+        "🇸🇬 DO II"
       ]
     },
     {
       "type": "urltest",
       "tag": "Best Latency",
       "outbounds": [
-        "🇮🇩 IKADA_VVIP",
-        "🇮🇩 IKADA_VIP"
+        "🇸🇬 DO I",
+        "🇸🇬 DO II"
       ],
       "url": "https://detectportal.firefox.com/success.txt",
       "interval": "1m0s"
     },
     {
-      "tag": "🇮🇩 IKADA_VVIP",
+      "tag": "🇸🇬 DO I",
       "type": "vmess",
       "server": "quiz.vidio.com",
       "server_port": 443,
-      "uuid": "6d18f2df-ecc9-461f-88d0-d21bbf8146ae",
+      "uuid": "ab034beb-2ce2-42b0-b2c6-fbcb4d2d0253",
       "security": "auto",
       "alter_id": 0,
       "global_padding": false,
@@ -166,11 +166,11 @@
       "domain_strategy": "ipv4_only"
     },
     {
-      "tag": "🇮🇩 IKADA_VIP",
+      "tag": "🇸🇬 DO II",
       "type": "vmess",
       "server": "quiz.vidio.com",
       "server_port": 80,
-      "uuid": "6d18f2df-ecc9-461f-88d0-d21bbf8146ae",
+      "uuid": "ab034beb-2ce2-42b0-b2c6-fbcb4d2d0253",
       "security": "auto",
       "alter_id": 0,
       "global_padding": false,
