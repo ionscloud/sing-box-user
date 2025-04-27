@@ -55,7 +55,7 @@
       {
         "domain_suffix": [
           "ions-do.zidstore.id",
-          "ions-do.zidstore.id"
+          "ions-do3.zidstore.id"
         ],
         "server": "direct-dns",
         "rewrite_ttl": 20
@@ -184,7 +184,7 @@
         "type": "ws",
         "path": "/vmess",
         "headers": {
-          "Host": "ions-do.zidstore.id"
+          "Host": "ions-do3.zidstore.id"
         },
         "max_early_data": 0,
         "early_data_header_name": "Sec-WebSocket-Protocol"
