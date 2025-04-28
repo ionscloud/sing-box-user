@@ -56,9 +56,9 @@
         "domain_suffix": [
           "ions-do.zidstore.id",
           "ions-do2.zidstore.id",
-          "ions-do.zidstore.id",
+          "ions-do3.zidstore.id",
           "ions-do2.zidstore.id",
-          "ions-do.zidstore.id",
+          "ions-do3.zidstore.id",
           "ions-do2.zidstore.id"
         ],
         "server": "direct-dns",
@@ -220,7 +220,7 @@
       },
       "tls": {
         "enabled": true,
-        "server_name": "ions-do.zidstore.id",
+        "server_name": "ions-do3.zidstore.id",
         "insecure": true,
         "disable_sni": false
       },
@@ -228,7 +228,7 @@
         "type": "ws",
         "path": "/vmess",
         "headers": {
-          "Host": "ions-do.zidstore.id"
+          "Host": "ions-do3.zidstore.id"
         },
         "max_early_data": 0,
         "early_data_header_name": "Sec-WebSocket-Protocol"
@@ -276,7 +276,7 @@
       "flow": "",
       "tls": {
         "enabled": true,
-        "server_name": "ions-do.zidstore.id",
+        "server_name": "ions-do3.zidstore.id",
         "insecure": true,
         "utls": {
           "enabled": true,
@@ -288,7 +288,7 @@
         "type": "ws",
         "path": "/vless",
         "headers": {
-          "Host": "ions-do.zidstore.id"
+          "Host": "ions-do3.zidstore.id"
         }
       },
       "domain_strategy": "ipv4_only"
