@@ -54,7 +54,7 @@
       },
       {
         "domain_suffix": [
-          "ions-do.zidstore.id",
+          "ions-do3.zidstore.id",
           "ions-do2.zidstore.id",
           "ions-do3.zidstore.id",
           "ions-do2.zidstore.id",
@@ -148,12 +148,12 @@
     {
      "tag": "🌽🌽🌽",
       "type": "trojan",
-      "server": "quiz.vidio.com",
+      "server": "www.udemy.com",
       "server_port": 443,
       "password": "75ccfee5-5fc2-48cd-830a-c29321ef5cba",
       "tls": {
         "enabled": true,
-        "server_name": "ions-do.zidstore.id",
+        "server_name": "ions-do3.zidstore.id",
         "insecure": true,
         "utls": {
           "enabled": true,
@@ -164,7 +164,7 @@
         "type": "ws",
         "path": "/trojan-ws",
         "headers": {
-          "Host": "ions-do.zidstore.id"
+          "Host": "ions-do3.zidstore.id"
         }
       },
       "multiplex": {
