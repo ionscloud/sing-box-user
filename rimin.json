@@ -55,7 +55,7 @@
       {
         "domain_suffix": [
           "ions-do2.zidstore.id",
-          "ions-do2.zidstore.id"
+          "ions-do3.zidstore.id"
         ],
         "server": "direct-dns",
         "rewrite_ttl": 20
@@ -119,26 +119,26 @@
       "tag": "Internet",
       "outbounds": [
         "Best Latency",
-        "🇮🇩 IKADA_VVIP",
-        "🇮🇩 IKADA_VIP"
+        "🇸🇬 DO II",
+        "BACK-UP"
       ]
     },
     {
       "type": "urltest",
       "tag": "Best Latency",
       "outbounds": [
-        "🇮🇩 IKADA_VVIP",
-        "🇮🇩 IKADA_VIP"
+        "🇸🇬 DO II",
+        "BACK-UP"
       ],
       "url": "https://detectportal.firefox.com/success.txt",
       "interval": "1m0s"
     },
     {
-      "tag": "🇮🇩 IKADA_VVIP",
+      "tag": "🇸🇬 DO II",
       "type": "vmess",
       "server": "quiz.vidio.com",
       "server_port": 443,
-      "uuid": "b983e977-6196-4033-8d86-c27dd5cb9e13",
+      "uuid": "57d67795-a8f3-4efb-bc9f-2db9a822292c",
       "security": "auto",
       "alter_id": 0,
       "global_padding": false,
@@ -166,11 +166,11 @@
       "domain_strategy": "ipv4_only"
     },
     {
-      "tag": "🇮🇩 IKADA_VIP",
+      "tag": "BACK-UP",
       "type": "vmess",
       "server": "quiz.vidio.com",
       "server_port": 80,
-      "uuid": "b983e977-6196-4033-8d86-c27dd5cb9e13",
+      "uuid": "5a3c7efe-d316-4278-8d4d-b7dd5e8849e5",
       "security": "auto",
       "alter_id": 0,
       "global_padding": false,
@@ -184,7 +184,7 @@
         "type": "ws",
         "path": "/vmess",
         "headers": {
-          "Host": "ions-do2.zidstore.id"
+          "Host": "ions-do3.zidstore.id"
         },
         "max_early_data": 0,
         "early_data_header_name": "Sec-WebSocket-Protocol"
