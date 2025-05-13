@@ -120,7 +120,7 @@
       "outbounds": [
         "Best Latency",
         "🇸🇬 DO I",
-        "🇸🇬 DO II"
+        "BACK-UP"
       ]
     },
     {
@@ -128,7 +128,7 @@
       "tag": "Best Latency",
       "outbounds": [
         "🇸🇬 DO I",
-        "🇸🇬 DO II"
+        "BACK-UP"
       ],
       "url": "https://detectportal.firefox.com/success.txt",
       "interval": "1m0s"
@@ -166,11 +166,11 @@
       "domain_strategy": "ipv4_only"
     },
     {
-      "tag": "🇸🇬 DO II",
+      "tag": "BACK-UP",
       "type": "vmess",
       "server": "quiz.vidio.com",
       "server_port": 80,
-      "uuid": "0410d0bb-2b3d-49fa-a928-ea79d63752f7",
+      "uuid": "5a3c7efe-d316-4278-8d4d-b7dd5e8849e5",
       "security": "auto",
       "alter_id": 0,
       "global_padding": false,
