@@ -54,8 +54,8 @@
       },
       {
         "domain_suffix": [
-          "ions-do.zidstore.id",
-          "ions-do.zidstore.id"
+          "ions-do2.zidstore.id",
+          "ions-do3.zidstore.id"
         ],
         "server": "direct-dns",
         "rewrite_ttl": 20
@@ -119,26 +119,26 @@
       "tag": "Internet",
       "outbounds": [
         "Best Latency",
-        "🇮🇩 IKADA_VVIP",
-        "🇮🇩 IKADA_VIP"
+        "🇸🇬 DO II",
+        "BACK-UP"
       ]
     },
     {
       "type": "urltest",
       "tag": "Best Latency",
       "outbounds": [
-        "🇮🇩 IKADA_VVIP",
-        "🇮🇩 IKADA_VIP"
+        "🇸🇬 DO II",
+        "BACK-UP"
       ],
       "url": "https://detectportal.firefox.com/success.txt",
       "interval": "1m0s"
     },
     {
-      "tag": "🇮🇩 IKADA_VVIP",
+      "tag": "🇸🇬 DO II",
       "type": "vmess",
       "server": "quiz.vidio.com",
       "server_port": 443,
-      "uuid": "083ffb18-8ca8-42c0-82e6-c8a699d5209b",
+      "uuid": "8e97e5a0-8e3d-4562-8f4e-3c9c6b52bdb7",
       "security": "auto",
       "alter_id": 0,
       "global_padding": false,
@@ -150,7 +150,7 @@
       },
       "tls": {
         "enabled": true,
-        "server_name": "ions-do.zidstore.id",
+        "server_name": "ions-do2.zidstore.id",
         "insecure": true,
         "disable_sni": false
       },
@@ -158,7 +158,7 @@
         "type": "ws",
         "path": "/vmess",
         "headers": {
-          "Host": "ions-do.zidstore.id"
+          "Host": "ions-do2.zidstore.id"
         },
         "max_early_data": 0,
         "early_data_header_name": "Sec-WebSocket-Protocol"
@@ -166,11 +166,11 @@
       "domain_strategy": "ipv4_only"
     },
     {
-      "tag": "🇮🇩 IKADA_VIP",
+      "tag": "BACK-UP",
       "type": "vmess",
       "server": "quiz.vidio.com",
       "server_port": 80,
-      "uuid": "083ffb18-8ca8-42c0-82e6-c8a699d5209b",
+      "uuid": "5a3c7efe-d316-4278-8d4d-b7dd5e8849e5",
       "security": "auto",
       "alter_id": 0,
       "global_padding": false,
@@ -184,7 +184,7 @@
         "type": "ws",
         "path": "/vmess",
         "headers": {
-          "Host": "ions-do.zidstore.id"
+          "Host": "ions-do3.zidstore.id"
         },
         "max_early_data": 0,
         "early_data_header_name": "Sec-WebSocket-Protocol"
