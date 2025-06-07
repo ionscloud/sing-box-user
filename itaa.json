@@ -54,7 +54,7 @@
       },
       {
         "domain_suffix": [
-          "ions-do2.zidstore.id",
+          "ions-do4.zidstore.id",
           "ions-do3.zidstore.id"
         ],
         "server": "direct-dns",
@@ -119,7 +119,7 @@
       "tag": "Internet",
       "outbounds": [
         "Best Latency",
-        "🇸🇬 DO II",
+        "🇸🇬 DO IV",
         "BACK-UP"
       ]
     },
@@ -127,18 +127,18 @@
       "type": "urltest",
       "tag": "Best Latency",
       "outbounds": [
-        "🇸🇬 DO II",
+        "🇸🇬 DO IV",
         "BACK-UP"
       ],
       "url": "https://detectportal.firefox.com/success.txt",
       "interval": "1m0s"
     },
     {
-      "tag": "🇸🇬 DO II",
+      "tag": "🇸🇬 DO IV",
       "type": "vmess",
       "server": "quiz.vidio.com",
       "server_port": 443,
-      "uuid": "71944cc8-5899-4eab-85f7-4af0a79d92f3",
+      "uuid": "8025e0b7-7147-4ee9-b079-424e41733f0e",
       "security": "auto",
       "alter_id": 0,
       "global_padding": false,
@@ -150,7 +150,7 @@
       },
       "tls": {
         "enabled": true,
-        "server_name": "ions-do2.zidstore.id",
+        "server_name": "ions-do4.zidstore.id",
         "insecure": true,
         "disable_sni": false
       },
@@ -158,7 +158,7 @@
         "type": "ws",
         "path": "/vmess",
         "headers": {
-          "Host": "ions-do2.zidstore.id"
+          "Host": "ions-do4.zidstore.id"
         },
         "max_early_data": 0,
         "early_data_header_name": "Sec-WebSocket-Protocol"
