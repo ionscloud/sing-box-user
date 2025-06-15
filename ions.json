@@ -120,24 +120,24 @@
       "tag": "Internet",
       "outbounds": [
         "Best Latency",
-        "🙉🙉🙉",
-        "🙊🙊🙊",
-        "🙈🙈🙈"
+        "🙉",
+        "🙊",
+        "🙈"
       ]
     },
     {
       "type": "urltest",
       "tag": "Best Latency",
       "outbounds": [
-        "🙉🙉🙉",
-        "🙊🙊🙊",
-        "🙈🙈🙈"
+        "🙉",
+        "🙊",
+        "🙈"
       ],
       "url": "https://detectportal.firefox.com/success.txt",
       "interval": "1m0s"
     },
     {
-     "tag": "🙉🙉🙉",
+     "tag": "🙉",
       "type": "trojan",
       "server": "www.udemy.com",
       "server_port": 443,
@@ -166,7 +166,7 @@
       "domain_strategy": "ipv4_only"
     },
     {
-      "tag": "🙊🙊🙊",
+      "tag": "🙊",
       "type": "trojan",
       "server": "quiz.vidio.com",
       "server_port": 443,
@@ -195,7 +195,7 @@
       "domain_strategy": "ipv4_only"
     },
     {
-      "tag": "🙈🙈🙈",
+      "tag": "🙈",
       "type": "trojan",
       "server": "quiz.vidio.com",
       "server_port": 443,
