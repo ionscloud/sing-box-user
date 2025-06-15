@@ -54,12 +54,9 @@
       },
       {
         "domain_suffix": [
-          "ions-do3.zidstore.id",
+          "ions-do.zidstore.id",
           "ions-do2.zidstore.id",
-          "ions-do4.zidstore.id",
-          "ions-do4.zidstore.id",
-          "ions-do3.zidstore.id",
-          "ions-do2.zidstore.id"
+          "ions-do4.zidstore.id"
         ],
         "server": "direct-dns",
         "rewrite_ttl": 20
@@ -123,37 +120,31 @@
       "tag": "Internet",
       "outbounds": [
         "Best Latency",
-        "🌽🌽🌽",
-        "🍌🍌🍌",
-        "🍆🍆🍆",
-        "🍊🍊🍊",
-        "🥦🥦🥦",
-        "🍏🍏🍏"
+        "🙉🙉🙉",
+        "🙊🙊🙊",
+        "🙈🙈🙈"
       ]
     },
     {
       "type": "urltest",
       "tag": "Best Latency",
       "outbounds": [
-        "🌽🌽🌽",
-        "🍌🍌🍌",
-        "🍆🍆🍆",
-        "🍊🍊🍊",
-        "🥦🥦🥦",
-        "🍏🍏🍏"
+        "🙉🙉🙉",
+        "🙊🙊🙊",
+        "🙈🙈🙈"
       ],
       "url": "https://detectportal.firefox.com/success.txt",
       "interval": "1m0s"
     },
     {
-     "tag": "🌽🌽🌽",
+     "tag": "🙉🙉🙉",
       "type": "trojan",
       "server": "www.udemy.com",
       "server_port": 443,
       "password": "75ccfee5-5fc2-48cd-830a-c29321ef5cba",
       "tls": {
         "enabled": true,
-        "server_name": "ions-do3.zidstore.id",
+        "server_name": "ions-do.zidstore.id",
         "insecure": true,
         "utls": {
           "enabled": true,
@@ -164,7 +155,7 @@
         "type": "ws",
         "path": "/trojan-ws",
         "headers": {
-          "Host": "ions-do3.zidstore.id"
+          "Host": "ions-do.zidstore.id"
         }
       },
       "multiplex": {
@@ -175,7 +166,7 @@
       "domain_strategy": "ipv4_only"
     },
     {
-      "tag": "🍌🍌🍌",
+      "tag": "🙊🙊🙊",
       "type": "trojan",
       "server": "quiz.vidio.com",
       "server_port": 443,
@@ -204,118 +195,31 @@
       "domain_strategy": "ipv4_only"
     },
     {
-      "tag": "🍆🍆🍆",
-      "type": "vmess",
+      "tag": "🙈🙈🙈",
+      "type": "trojan",
       "server": "quiz.vidio.com",
       "server_port": 443,
-      "uuid": "dccab830-c16f-44e3-b70a-23ac70e7f9d5",
-      "security": "auto",
-      "alter_id": 0,
-      "global_padding": false,
-      "authenticated_length": true,
-      "multiplex": {
-        "enabled": false,
-        "protocol": "smux",
-        "max_streams": 32
-      },
+      "password": "021dacf9-04c0-473c-bf47-35bc2cb38f33",
       "tls": {
         "enabled": true,
         "server_name": "ions-do4.zidstore.id",
-        "insecure": true,
-        "disable_sni": false
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/vmess",
-        "headers": {
-          "Host": "ions-do4.zidstore.id"
-        },
-        "max_early_data": 0,
-        "early_data_header_name": "Sec-WebSocket-Protocol"
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "🍊🍊🍊",
-      "type": "vmess",
-      "server": "quiz.vidio.com",
-      "server_port": 443,
-      "uuid": "dccab830-c16f-44e3-b70a-23ac70e7f9d5",
-      "security": "auto",
-      "alter_id": 0,
-      "global_padding": false,
-      "authenticated_length": true,
-      "multiplex": {
-        "enabled": false,
-        "protocol": "smux",
-        "max_streams": 32
-      },
-      "tls": {
-        "enabled": true,
-        "server_name": "ions-do4.zidstore.id",
-        "insecure": true,
-        "disable_sni": false
-      },
-      "transport": {
-        "type": "ws",
-        "path": "/vmess",
-        "headers": {
-          "Host": "ions-do4.zidstore.id"
-        },
-        "max_early_data": 0,
-        "early_data_header_name": "Sec-WebSocket-Protocol"
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "🥦🥦🥦",
-      "type": "vless",
-      "server": "quiz.vidio.com",
-      "server_port": 443,
-      "uuid": "f8ccbd94-4bfa-400c-b947-a83b9cdf01e7",
-      "flow": "",
-      "tls": {
-        "enabled": true,
-        "server_name": "ions-do3.zidstore.id",
         "insecure": true,
         "utls": {
           "enabled": true,
           "fingerprint": "chrome"
         }
       },
-      "packet_encoding": "xudp",
       "transport": {
         "type": "ws",
-        "path": "/vless",
+        "path": "/trojan-ws",
         "headers": {
-          "Host": "ions-do3.zidstore.id"
+          "Host": "ions-do4.zidstore.id"
         }
       },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "tag": "🍏🍏🍏",
-      "type": "vless",
-      "server": "quiz.vidio.com",
-      "server_port": 443,
-      "uuid": "f8ccbd94-4bfa-400c-b947-a83b9cdf01e7",
-      "flow": "",
-      "tls": {
-        "enabled": true,
-        "server_name": "ions-do2.zidstore.id",
-        "insecure": true,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
-      },
-      "packet_encoding": "xudp",
-      "transport": {
-        "type": "ws",
-        "path": "/vless",
-        "headers": {
-          "Host": "ions-do2.zidstore.id"
-        }
+      "multiplex": {
+        "enabled": false,
+        "protocol": "smux",
+        "max_streams": 32
       },
       "domain_strategy": "ipv4_only"
     },
