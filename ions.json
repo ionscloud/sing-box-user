@@ -139,7 +139,7 @@
     {
      "tag": "🙉",
       "type": "trojan",
-      "server": "www.udemy.com",
+      "server": "quiz.vidio.com",
       "server_port": 443,
       "password": "75ccfee5-5fc2-48cd-830a-c29321ef5cba",
       "tls": {
