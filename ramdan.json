@@ -55,7 +55,7 @@
       {
         "domain_suffix": [
           "ions-do4.zidstore.id",
-          "ions-do3.zidstore.id"
+          "ions-do4.zidstore.id"
         ],
         "server": "direct-dns",
         "rewrite_ttl": 20
@@ -138,7 +138,7 @@
       "type": "vmess",
       "server": "quiz.vidio.com",
       "server_port": 443,
-      "uuid": "3f1ffdc8-5703-4f0b-961c-f1401cd316fc",
+      "uuid": "73354634-f51f-44c0-9484-3580330ed7db",
       "security": "auto",
       "alter_id": 0,
       "global_padding": false,
@@ -170,7 +170,7 @@
       "type": "vmess",
       "server": "quiz.vidio.com",
       "server_port": 80,
-      "uuid": "5a3c7efe-d316-4278-8d4d-b7dd5e8849e5",
+      "uuid": "73354634-f51f-44c0-9484-3580330ed7db",
       "security": "auto",
       "alter_id": 0,
       "global_padding": false,
@@ -184,7 +184,7 @@
         "type": "ws",
         "path": "/vmess",
         "headers": {
-          "Host": "ions-do3.zidstore.id"
+          "Host": "ions-do4.zidstore.id"
         },
         "max_early_data": 0,
         "early_data_header_name": "Sec-WebSocket-Protocol"
