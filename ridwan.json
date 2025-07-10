@@ -55,7 +55,7 @@
       {
         "domain_suffix": [
           "ions-do4.zidstore.id",
-          "ions-do3.zidstore.id"
+          "ions-do4.zidstore.id"
         ],
         "server": "direct-dns",
         "rewrite_ttl": 20
