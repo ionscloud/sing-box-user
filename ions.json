@@ -1,259 +1,210 @@
 {
-  "log": {
-    "disabled": false,
-    "level": "warn",
-    "timestamp": true
+  "dns": {
+    "fakeip": {
+      "enabled": true,
+      "inet4_range": "198.18.0.0/15",
+      "inet6_range": "fc00::/18"
+    },
+    "independent_cache": true,
+    "rules": [
+      {
+        "outbound": [
+          "any"
+        ],
+        "server": "local"
+      },
+      {
+        "domain_suffix": [
+          "domain.com"
+        ],
+        "server": "local"
+      },
+      {
+        "query_type": [
+          "A",
+          "AAAA"
+        ],
+        "rewrite_ttl": 1,
+        "server": "fakeip"
+      },
+      {
+        "clash_mode": "global",
+        "server": "remote"
+      },
+      {
+        "clash_mode": "direct",
+        "server": "local"
+      }
+    ],
+    "servers": [
+      {
+        "address": "https://8.8.8.8/dns-query",
+        "detour": "select",
+        "tag": "remote"
+      },
+      {
+        "address": "192.168.1.1",
+        "detour": "direct",
+        "tag": "local"
+      },
+      {
+        "address": "rcode://success",
+        "tag": "block"
+      },
+      {
+        "address": "fakeip",
+        "tag": "fakeip"
+      }
+    ],
+    "strategy": "prefer_ipv4"
   },
   "experimental": {
-    "cache_file": {
-      "enabled": true,
-      "path": "cache.db"
-    },
     "clash_api": {
-      "external_controller": "0.0.0.0:9090",
-      "external_ui": "yacd",
-      "external_ui_download_url": "https://github.com/MetaCubeX/Yacd-meta/archive/gh-pages.zip",
-      "external_ui_download_detour": "Internet",
-      "secret": "",
+      "external_controller": "127.0.0.1:9090",
+      "external_ui": "ui",
       "default_mode": "rule"
     }
   },
-  "dns": {
-    "servers": [
-      {
-        "tag": "Internet-dns",
-        "address": "1.0.0.1",
-        "strategy": "ipv4_only",
-        "detour": "Internet"
-      },
-      {
-        "tag": "Best Latency-dns",
-        "address": "1.1.1.1",
-        "strategy": "ipv4_only",
-        "detour": "Best Latency"
-      },
-      {
-        "tag": "direct-dns",
-        "address": "local",
-        "strategy": "ipv4_only",
-        "detour": "direct"
-      },
-      {
-        "tag": "block-dns",
-        "address": "rcode://success"
-      }
-    ],
-    "rules": [
-      {
-        "domain_suffix": [
-          ".arpa.",
-          ".arpa"
-        ],
-        "server": "block-dns",
-        "rewrite_ttl": 20
-      },
-      {
-        "domain_suffix": [
-          "ions-do.zidstore.id",
-          "ions-do2.zidstore.id",
-          "ions-do4.zidstore.id"
-        ],
-        "server": "direct-dns",
-        "rewrite_ttl": 20
-      },
-      {
-        "network": "udp",
-        "port": 443,
-        "server": "block-dns",
-        "rewrite_ttl": 20
-      },
-      {
-        "outbound": "Internet",
-        "server": "Internet-dns",
-        "rewrite_ttl": 20
-      },
-      {
-        "outbound": "Best Latency",
-        "server": "Best Latency-dns",
-        "rewrite_ttl": 20
-      },
-      {
-        "outbound": "direct",
-        "server": "direct-dns",
-        "rewrite_ttl": 20
-      },
-      {
-        "outbound": "any",
-        "server": "direct-dns",
-        "rewrite_ttl": 20
-      }
-    ],
-    "reverse_mapping": true,
-    "strategy": "ipv4_only",
-    "independent_cache": true,
-    "disable_cache": true
-  },
   "inbounds": [
     {
-      "type": "tun",
-      "tag": "tun-in",
-      "interface_name": "tun0",
-      "inet4_address": "172.19.0.1/30",
-      "mtu": 9000,
+      "address": [
+        "172.19.0.1/30",
+        "fdfe:dcba:9876::1/126"
+      ],
       "auto_route": true,
-      "strict_route": true,
-      "stack": "system",
       "endpoint_independent_nat": true,
-      "sniff": true
+      "mtu": 9000,
+      "strict_route": true,
+      "type": "tun"
     },
     {
-      "listen": "0.0.0.0",
-      "listen_port": 2080,
-      "sniff": true,
+      "listen": "127.0.0.1",
+      "listen_port": 2333,
+      "tag": "socks-in",
+      "type": "socks",
+      "users": []
+    },
+    {
+      "listen": "127.0.0.1",
+      "listen_port": 2334,
       "tag": "mixed-in",
-      "type": "mixed"
+      "type": "mixed",
+      "users": []
     }
   ],
+  "log": {},
   "outbounds": [
     {
+      "tag": "select",
       "type": "selector",
-      "tag": "Internet",
+      "default": "DO I",
       "outbounds": [
-        "Best Latency",
-        "🙉",
-        "🙊",
-        "🙈"
+        "DO I",
+        "DO II",
+        "DO IV",
+        "direct"
       ]
     },
     {
-      "type": "urltest",
-      "tag": "Best Latency",
-      "outbounds": [
-        "🙉",
-        "🙊",
-        "🙈"
-      ],
-      "url": "https://detectportal.firefox.com/success.txt",
-      "interval": "1m0s"
+      "tag": "direct",
+      "type": "direct"
     },
     {
-     "tag": "🙉",
       "type": "trojan",
-      "server": "quiz.vidio.com",
+      "tag": "DO I",
+      "server": "104.22.5.240",
       "server_port": 443,
       "password": "75ccfee5-5fc2-48cd-830a-c29321ef5cba",
       "tls": {
         "enabled": true,
-        "server_name": "ions-do.zidstore.id",
         "insecure": true,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
+        "server_name": "ions-do.zidstore.id"
       },
       "transport": {
         "type": "ws",
-        "path": "/trojan-ws",
+        "path": "/whatever/trojan-ws",
         "headers": {
           "Host": "ions-do.zidstore.id"
         }
-      },
-      "multiplex": {
-        "enabled": false,
-        "protocol": "smux",
-        "max_streams": 32
-      },
-      "domain_strategy": "ipv4_only"
+      }
     },
     {
-      "tag": "🙊",
       "type": "trojan",
-      "server": "quiz.vidio.com",
+      "tag": "DO II",
+      "server": "104.22.5.240",
       "server_port": 443,
       "password": "75ccfee5-5fc2-48cd-830a-c29321ef5cba",
       "tls": {
         "enabled": true,
-        "server_name": "ions-do2.zidstore.id",
         "insecure": true,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
+        "server_name": "ions-do2.zidstore.id"
       },
       "transport": {
         "type": "ws",
-        "path": "/trojan-ws",
+        "path": "/whatever/trojan-ws",
         "headers": {
           "Host": "ions-do2.zidstore.id"
         }
-      },
-      "multiplex": {
-        "enabled": false,
-        "protocol": "smux",
-        "max_streams": 32
-      },
-      "domain_strategy": "ipv4_only"
+      }
     },
     {
-      "tag": "🙈",
       "type": "trojan",
-      "server": "quiz.vidio.com",
+      "tag": "DO IV",
+      "server": "ions-do4.zidstore.id",
       "server_port": 443,
       "password": "021dacf9-04c0-473c-bf47-35bc2cb38f33",
       "tls": {
         "enabled": true,
-        "server_name": "ions-do4.zidstore.id",
         "insecure": true,
-        "utls": {
-          "enabled": true,
-          "fingerprint": "chrome"
-        }
+        "server_name": "static-web.prod.vidiocdn.com"
       },
       "transport": {
-        "type": "ws",
-        "path": "/trojan-ws",
-        "headers": {
-          "Host": "ions-do4.zidstore.id"
-        }
-      },
-      "multiplex": {
-        "enabled": false,
-        "protocol": "smux",
-        "max_streams": 32
-      },
-      "domain_strategy": "ipv4_only"
-    },
-    {
-      "type": "direct",
-      "tag": "direct"
-    },
-    {
-      "type": "block",
-      "tag": "block"
-    },
-    {
-      "type": "dns",
-      "tag": "dns-out"
+        "type": "grpc",
+        "service_name": "trojan-grpc"
+      }
     }
   ],
   "route": {
     "auto_detect_interface": true,
-    "override_android_vpn": true,
-    "final": "Internet",
-    "geoip": {
-      "download_url": "https://github.com/malikshi/sing-box-geo/releases/latest/download/geoip.db",
-      "download_detour": "Best Latency"
-    },
-    "geosite": {
-      "download_url": "https://github.com/malikshi/v2ray-rules-dat/releases/latest/download/geosite.db",
-      "download_detour": "Best Latency"
-    },
+    "rule_set": [],
     "rules": [
       {
-        "outbound": "dns-out",
-        "port": [
-          53
-        ]
+        "domain_suffix": [
+          "domain.com"
+        ],
+        "outbound": "direct"
+      },
+      {
+        "action": "sniff"
+      },
+      {
+        "action": "hijack-dns",
+        "protocol": "dns"
+      },
+      {
+        "action": "resolve",
+        "strategy": "prefer_ipv4"
+      },
+      {
+        "clash_mode": "direct",
+        "outbound": "direct"
+      },
+      {
+        "clash_mode": "global",
+        "outbound": "select"
+      },
+      {
+        "ip_is_private": true,
+        "outbound": "direct"
+      },
+      {
+        "domain_suffix": [
+          "google.com"
+        ],
+        "outbound": "select"
+      },
+      {
+        "outbound": "direct"
       }
     ]
   }
