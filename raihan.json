@@ -136,7 +136,7 @@
     {
       "tag": "🇮🇩 IKADA_VVIP",
       "type": "vmess",
-      "server": "www.udemy.com",
+      "server": "quiz.vidio.com",
       "server_port": 443,
       "uuid": "dfdf9a89-6c37-4fc7-8bd5-a0685476fbc2",
       "security": "auto",
@@ -168,7 +168,7 @@
     {
       "tag": "🇮🇩 IKADA_VIP",
       "type": "vmess",
-      "server": "www.udemy.com",
+      "server": "quiz.vidio.com",
       "server_port": 80,
       "uuid": "dfdf9a89-6c37-4fc7-8bd5-a0685476fbc2",
       "security": "auto",
