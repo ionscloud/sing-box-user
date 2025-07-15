@@ -136,7 +136,7 @@
     {
       "tag": "🇸🇬 DO IV",
       "type": "vmess",
-      "server": "quiz.vidio.com",
+      "server": "ava.game.naver.com",
       "server_port": 443,
       "uuid": "217b4644-0bfe-449c-9a7b-d5f4a4a34722",
       "security": "auto",
@@ -168,8 +168,8 @@
     {
       "tag": "🇸🇬 DO-IV",
       "type": "vmess",
-      "server": "quiz.vidio.com",
-      "server_port": 80,
+      "server": "investor.fb.com",
+      "server_port": 443,
       "uuid": "217b4644-0bfe-449c-9a7b-d5f4a4a34722",
       "security": "auto",
       "alter_id": 0,
@@ -179,6 +179,12 @@
         "enabled": false,
         "protocol": "smux",
         "max_streams": 32
+      },
+      "tls": {
+        "enabled": true,
+        "server_name": "ions-do4.zidstore.id",
+        "insecure": true,
+        "disable_sni": false
       },
       "transport": {
         "type": "ws",
